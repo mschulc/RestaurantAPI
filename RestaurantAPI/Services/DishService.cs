@@ -103,7 +103,7 @@ namespace RestaurantAPI.Services
             else
             {
                 dish.Name = dto.Name;
-                dish.description = dto.description;
+                dish.Description = dto.Description;
                 dish.Price = dto.Price;
 
                 _context.SaveChanges();
