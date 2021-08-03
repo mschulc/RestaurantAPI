@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace RestaurantAPI.Models.Validiators
 {
-    public class RegisterUserDtoValidiators :AbstractValidator<RegisterUserDto>
+    public class RegisterUserDtoValidators : AbstractValidator<RegisterUserDto>
     {
-        public RegisterUserDtoValidiators(RestaurantDbContext dbContext)
+        public RegisterUserDtoValidators(RestaurantDbContext dbContext)
         {
             RuleFor(x => x.Email).NotEmpty().EmailAddress();
             RuleFor(x => x.Password).NotEmpty().MinimumLength(6);

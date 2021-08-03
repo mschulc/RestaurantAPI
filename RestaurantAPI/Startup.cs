@@ -82,7 +82,8 @@ namespace RestaurantAPI
             services.AddScoped<IDishService, DishService>();
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
-            services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidiators>();
+            services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidators>();
+            services.AddScoped<IValidator<RestaurantQuery>, RestaurantQueryValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
